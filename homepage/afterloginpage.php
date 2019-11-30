@@ -1,0 +1,439 @@
+<?php
+include("security.php");
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SuperFast ISP</title>
+	<link rel ="stylesheet" href="style.css">
+	<link rel ="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel ="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	
+		<!-----NavigationBar---->
+		<section id="nav-bar">
+				<nav class="navbar navbar-expand-lg navbar-light">
+				  <a class="navbar-brand" href="afterloginpage.php"><img src="img/superfast-logo2.png" width="150" height="75"></a>
+				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				  </button>
+				  <div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ml-auto">
+					  <li class="nav-item ">
+						<a class="nav-link" href="afterloginpage.php">HOME <span class="sr-only">(current)</span></a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="#about">ABOUT US</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="#services">SERVICES</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="#products" >OUR PRODUCTS</a>
+					</li>
+					  <li class="nav-item">
+							<a class="nav-link" href="#priceplan" >PRICE PLANS</a>
+						</li>
+					  <li class="nav-item">
+							<a class="nav-link" href="#contact" >CONTACT US</a>
+						</li>
+						<!-- <li class="nav-item">
+						<a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal" ><i class="fa fa-sign-out" ></i>Sign Out</a>	
+				  		</li> -->
+                           <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-black-800 small">
+                  
+               <?php echo $_SESSION['username']; ?>
+                  
+                </span>
+                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/30x30">
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" name="edit-btn" href="userprofile.php" >
+                  Profile
+                </a>
+                <a class="dropdown-item" href="superfast.html">
+                  Sign Out
+				</a>
+			</li>
+					</div>
+					
+					</ul>
+				  </div>
+				</nav>
+			</section>
+
+			
+			<!---Slider-->
+			<div id="slider">
+					<div id="headerSlider" class="carousel slide" data-ride="carousel">
+							<ol class="carousel-indicators">
+							  <li data-target="#headerSlider" data-slide-to="0" class="active"></li>
+							  <li data-target="#headerSlider" data-slide-to="1"></li>
+							  <li data-target="#headerSlider" data-slide-to="2"></li>
+							</ol>
+							<div class="carousel-inner">
+							  <div class="carousel-item active">
+								<img src="img/bgnet.jpg"  class="d-block img-fluid" alt="First Slide">
+								<div class="carousel-caption">
+									<h5>Welcome <?php echo $_SESSION["username"];?></h5> 
+								>
+								</div>
+							  </div>
+							  <div class="carousel-item">
+								<img src="img/f.jpg" 
+								class="d-block img-fluid" alt="Second Slide">
+								<div class="carousel-caption">
+										<h5>BEST Price and Service</h5>
+									</div>
+							  </div>
+							  <div class="carousel-item">
+								<img src="img/Webp.net-resizeimage.jpg" class="d-block img-fluid" alt="Third Slide">
+								<div class="carousel-caption">
+										<h5>SuperFast guarantee the best needs and suitable price</h5>
+									</div>
+							  </div>
+							</div>
+							<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+							  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							  <span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+							  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+							  <span class="sr-only">Next</span>
+							</a>
+						  </div>
+			</div>
+	<!---About--->
+		<section id="about">
+		<div class="container">
+			<div class="row">
+					<div class="col-md-6">
+						<h2>ABOUT US</h2>
+							<div class="about-content">
+							SuperFast ISP we strive to create quality product and services to fulfill everyone's life 
+							and never stops inventing or enhancing our services. We intend to provide the best digital
+							services and solutions. Upgrade your online experience with our internet service. 
+							Our target is to cover more than 10 million households across the country by 2022.
+							</div>
+								
+					</div>
+								<div class="col-md-6 expansion-bar">
+									<p>Customers</p>
+									<div class="progress">
+										<div class="progress-bar" style="width: 80%">80%</div>
+									</div>
+									<p>Speed</p>
+									<div class="progress">
+										<div class="progress-bar" style="width: 50%">50%</div>
+									</div>
+									<p>Price</p>
+									<div class="progress">
+										<div class="progress-bar" style="width: 65%">65%</div>
+									</div>
+									<p>Branch</p>
+									<div class="progress">
+										<div class="progress-bar" style="width: 70%">70%</div>
+									</div>
+									
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<!----Services--->
+	<section id="services">
+		<div class="container">
+			<h1>OUR SERVICES</h1>
+		
+		<div class="row services">
+			<div class="col-md-3 text-center">
+				<div class="icon">
+						<i class="fa fa-desktop"></i>
+				</div>
+				<h3>Consulting</h3>
+				<p>Consulting <br> and problem solving</p>
+			</div>
+			<div class="col-md-3 text-center">
+					<div class="icon">
+					<i class="fa fa-cloud-upload" ></i>
+					</div>
+					<h3>Cloud Storage</h3>
+					<p>Upload your valuable<br>data with us.</p>
+				</div>
+				<div class="col-md-3 text-center">
+						<div class="icon">
+						<i class="fa fa-pie-chart"></i>
+						</div>
+						<h3>SAAS</h3>
+						<p>Software as a Service </p>
+					</div>
+					<div class="col-md-3 text-center">
+							<div class="icon">
+							<i class="fa fa-cogs"></i>
+							</div>
+							<h3>Repair</h3>
+							<p>Provide wifi traffic<br>repairing service.</p>
+						</div>
+		</div>
+		</div>
+	</section>
+	<!---Team-->
+<section id="products">
+	<div class="container">
+		<h1>OUR PRODUCTS</h1>
+		<div class="row">
+			<div class="col-md-3 profile-pic text-center">
+				<div class="img-box">
+					<img src="img/cable.jpg" height="300" width="250" class="img-responsive">
+					<ul>
+					<a href="protab.php" class="btn btn-primary">Buy Now</a>
+					</ul>
+				</div>
+				<h2>Fiber Optic</h2>
+				<h3>From Japan</h3>
+				<p>Fast, new generation.</p>
+				</div>
+				<div class="col-md-3 profile-pic text-center">
+						<div class="img-box">
+							<img src="img/cox.jpg" height="300" width="250" class="img-responsive">
+							<ul>
+							<a href="protab.php" class="btn btn-primary">Buy Now</a>
+							</ul>
+						</div>
+						<h2>Coaxial </h2>
+						<h3>coaxial cable</h3>
+						<p>High speed and cheap</p>
+						</div>
+						<div class="col-md-3 profile-pic text-center">
+								<div class="img-box">
+									<img src="img/router.jpg" height="300" width="250" class="img-responsive">
+									<ul>
+									<a href="protab.php" class="btn btn-primary">Buy Now</a>
+									</ul>
+								</div>
+								<h2>Router</h2>
+								<h3>Brand: Linksys</h3>
+								<p>Model: Linksys high speed</p>
+								</div>
+								<div class="col-md-3 profile-pic text-center">
+										<div class="img-box">
+											<img src="img/uni.jpg" height="300" width="250" class="img-responsive">
+											<ul>
+											<a href="protab.php" class="btn btn-primary">Buy Now</a>
+												
+											</ul>
+										</div>
+										<h2>Unifi</h2>
+										<h3>Access Point</h3>
+										<p>Good Quality and cheap</p>
+										</div>
+			</div>
+	</div>
+</section>
+
+<!--promo-->
+<section id="promo">
+	<div class="container">
+		<p>Get free Domain Name and Web Hosting</p>
+		<a href="#contact" class="btn btn-primary">Contact Us</a>
+	</div>
+	</section>
+
+	<!--Price plan-->
+	<section id="priceplan">
+		<div class="container">
+			<h1>Price Plans</h1>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="single-price">
+						<div class="price-head">
+							<h2>Home Package</h2>
+							<p>599 Baht/<span>Month</span></p>
+						</div>
+						<div class="price-content">
+							<ul>
+								<li><i class="fa fa-check-circle"></i>Max Speed</li>
+								<li><i class="fa fa-check-circle"></i>Download/Upload</li>
+								<li><i class="fa fa-check-circle"></i>
+									100/100 Mbps</li>
+								<li><i class="fa fa-times-circle"></i>Unlimited Call</li>
+								<li><i class="fa fa-times-circle"></i>Unlimited Speed</li>
+							</ul>
+
+						</div>
+						<div class="price-button">
+							<a class="buy-btn" href="packagestore.php">Apply</a>
+
+						</div>
+					</div>
+
+				</div>
+				<div class="col-md-3">
+					<div class="single-price">
+						<div class="price-head">
+							<h2>Premium</h2>
+							<p>899 Baht/<span>Month</span></p>
+						</div>
+						<div class="price-content">
+							<ul>
+								<li><i class="fa fa-check-circle"></i>Max Speed</li>
+								<li><i class="fa fa-check-circle"></i>Download/Upload</li>
+								<li><i class="fa fa-check-circle"></i>
+									300/300 Mbps</li>
+								<li><i class="fa fa-times-circle"></i>Unlimited Domain</li>
+								<li><i class="fa fa-times-circle"></i>Unlimited Support</li>
+							</ul>
+
+						</div>
+						<div class="price-button">
+							<a class="buy-btn" href="packagestore.php">Apply</a>
+
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-md-3">
+					<div class="single-price">
+						<div class="price-head">
+							<h2>Business</h2>
+							<p>1099 Baht/<span>Month</span></p>
+						</div>
+						<div class="price-content">
+							<ul>
+								<li><i class="fa fa-check-circle"></i>Max Speed</li>
+								<li><i class="fa fa-check-circle"></i>Download/Upload</li>
+								<li><i class="fa fa-check-circle"></i>
+									500/500 Mbps</li>
+								<li><i class="fa fa-check-circle"></i>Unlimited Domain</li>
+								<li><i class="fa fa-check-circle"></i>Unlimited Support</li>
+							</ul>
+
+						</div>
+						<div class="price-button">
+							<a class="buy-btn" href="packagestore.php">Apply</a>
+
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-md-3">
+					<div class="single-price">
+						<div class="price-head">
+							<h2>Enterprise</h2>
+							<p>5000 Baht/<span>month</span></p>
+						</div>
+						<div class="price-content">
+							<ul>
+								<li><i class="fa fa-check-circle"></i>Max Space</li>
+								<li><i class="fa fa-check-circle"></i>Download/Upload</li>
+								<li><i class="fa fa-check-circle"></i>
+									1000/500 Mbps</li>
+								<li><i class="fa fa-check-circle"></i>Unlimited Domain</li>
+								<li><i class="fa fa-check-circle"></i>Unlimited Support</li>
+							</ul>
+
+						</div>
+						<div class="price-button">
+							<a class="buy-btn" href="packagestore.php">Apply</a>
+
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+	</section>
+
+	<!-------contact-------->
+	<section id="contact">
+		<div class="container">
+			<h1>Get in touch with SuperFast</h1>
+			<div class="row">
+				<div class="col-md-6">
+					<form class="contact-form">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Your Name">
+						</div>
+						<div class="form-group">
+								<input type="number" class="form-control" placeholder="Phone No.">
+							</div>
+							<div class="form-group">
+									<input type="email" class="form-control" placeholder="Email">
+								</div>
+								<div class="form-group">
+										<textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+									</div>
+									<a href="protab.php" class="btn btn-primary">SEND MESSAGE</a>
+						</form>
+				</div>
+			<div class="col-md-6 contact-info">
+				<div class="follow"><b>Address:</b> <i class="fa fa-map-marker"></i>
+					Bangkadi Pathum Thani Thailand</div>
+				<div class="follow"><b>Tel:</b> <i class="fa fa-map-phone"></i>+64 123456789</div>
+				<div class="follow"><b>Email:</b><i class="fa fa-map-envelope-o"></i> superfastisp@best.com</div>
+				<div class="follow"><label><b>Get Social :</b> </label>
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-google"></i></a>
+
+				</div>
+			</div>		
+			</div>
+			</div>
+		</section>
+
+<!--Footer-->
+<section id="footer">
+	<div class="container text-center">
+		<p>copyright <i class="fa fa-copyright"></i>SuperFast ISP
+		</p>
+		</div>
+
+</section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">SIGN OUT?</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							...
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+							<form action="logout.php" method="POST">
+								<button type="submit" class="btn btn-primary" name="logout_btn">Sign Out</button>
+							</form>
+						</div>
+
+						</div>
+					</div>
+					</div>
+<!--Footer End-->
+<script src="js/smooth-scroll.js"></script>
+<script>
+		var scroll = new SmoothScroll('a[href*="#"]');
+	</script>
+</body>
+</html>
